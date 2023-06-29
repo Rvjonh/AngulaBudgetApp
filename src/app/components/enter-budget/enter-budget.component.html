@@ -8,12 +8,26 @@
             <div class="card-text">
                 <p class="m-0 text-center">Please enter your budget below:</p>
             </div>
-            <form  class="mt-4 form-control">
-                <input class="w-100 form-control-lg text-center" type="number" name="budget" id="budget" placeholder="Your budget:" />
+            <div *ngIf="incorrectQuatity" class="card-text text-center">
+                <span class="badge text-bg-danger">the budget must be greater than zero</span>
+            </div>
+            <div class="mt-2 form-control">
+                <input class="w-100 form-control-lg text-center" 
+                        type="number" 
+                        [(ngModel)]="quatity"
+                        name="quatity"
+                        placeholder="Your budget:" 
+                        (keypress)="readEnter($event)"
+                        />
                 <div class="d-flex justify-content-center mt-2">
-                    <button class="btn btn-info" type="submit">Process Budget</button>
+                    <button class="btn btn-info" 
+                        type="submit"
+                        (click)="addBudget()"
+                        >
+                        Process Budget
+                    </button>
                 </div>
-            </form>
+            </div>
         </div>
     </div>
 </div>

@@ -7,6 +7,7 @@ import { ExpensesComponent } from './components/expenses/expenses.component';
 import { EnterBudgetComponent } from './components/enter-budget/enter-budget.component';
 import { EnterExpenseComponent } from './components/expenses/enter-expense/enter-expense.component';
 import { ListExpenseComponent } from './components/expenses/list-expense/list-expense.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ListExpenseComponent } from './components/expenses/list-expense/list-ex
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
