@@ -3,10 +3,18 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ExpensesComponent } from './components/expenses/expenses.component';
+import { EnterBudgetComponent } from './components/enter-budget/enter-budget.component';
+import { EnterExpenseComponent } from './components/expenses/enter-expense/enter-expense.component';
+import { ListExpenseComponent } from './components/expenses/list-expense/list-expense.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ExpensesComponent,
+    EnterBudgetComponent,
+    EnterExpenseComponent,
+    ListExpenseComponent
   ],
   imports: [
     BrowserModule,
