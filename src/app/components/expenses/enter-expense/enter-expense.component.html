@@ -4,18 +4,26 @@
     </div>
     <div class="card-body">
 
+        <div *ngIf="incorrectForm" class="card-text text-center">
+            <span class="badge text-bg-danger">{{ textMessageIncorrectForm }}</span>
+        </div>
+
         <div class="card-text mt-2">
             <label for="expense">Expense:</label>
-            <input class="form-control" id="expense" type="text" placeholder="Expense:">
+            <input [(ngModel)]="nameExpense" class="form-control" id="expense" type="text" placeholder="Expense:">
         </div>
 
         <div class="card-text mt-2">
             <label for="quantityProcess">Quantity:</label>
-            <input class="form-control" id="quantityProcess" type="number" placeholder="Quatity:">
+            <input [(ngModel)]="quantityNumber" class="form-control" id="quantityProcess" type="number" placeholder="Quatity:">
         </div>
 
         <div class="d-flex justify-content-end mt-2">
-            <button class="btn btn-info">Process</button>
+            <button class="btn btn-info"
+                (click)="addExpense()"
+            >
+                Process
+            </button>
         </div>
     </div>
 </div>
