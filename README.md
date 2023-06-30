@@ -1,5 +1,9 @@
 # AngularBudgetApp
 
+Project to practice rxjs and observables:
+live:
+https://rvjonh-budget-app.netlify.app/
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.0.
 
 ## Development server
